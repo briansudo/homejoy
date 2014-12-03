@@ -16,7 +16,7 @@ intersection with a line that doesn't account for the curvature of the Earth.
 
 Where Further Improvements Can Be Made
 -------
-1. Improve Algorithm - Currently, we are creating polygons for every zipcode. However, if we can "sort" the zip codes and consider only a subset of all the zipcodes by having a heuristic that determines if the zipcode is likely in the line's path, we can reduce the amount of time creating polygons and determining intersections.
+1. Improve Algorithm - Currently, I am creating polygons for every zipcode. However, if we can "sort" the zip codes and consider only a subset of all the zipcodes by having a heuristic that determines if the zipcode is likely in the line's path, we can reduce the amount of time creating polygons and determining intersections.
 2. Implement a RESTful API like protocol for ```get-intersections```.
 3. Implement Part C, which is basically using Google Directions and plotting that
 4. Improve the aesthetics, such as creatively displaying the zipcodes, instead of using commas and spaces
