@@ -30,7 +30,7 @@ over the past couple of days and was only able to spend about a half a day on th
 
 Technologies used
 -----
-Google Maps API, Shapely, Python Shapefile Library, Django, Bootstrap, Font Awesome
+Google Maps API, Shapely, Python Shapefile Library, Django, Bootstrap, Font Awesome, jQuery
 
 Heroku had an issue with the geos_c library. Otherwise, you would have been able to have a live demo straight from a URL. You can check out that issue here: http://homejoy.herokuapp.com
 
