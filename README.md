@@ -1,7 +1,9 @@
 Homejoy Takehome Test
 =======
 
-Quick Blurb: Here's my takehome test! I used the Python Shapefile Library (Fiona had a problem with dependencies on my computer)
+Quick Blurb
+-------
+Here's my takehome test! I used the Python Shapefile Library (Fiona had a problem with dependencies on my computer)
 to extract information from the zipped archive of zipcodes. Using Google's Geocoder feature as part of its Maps API, I obtained the
 latitude and longtitude of two addresses, A and B. Using Shapely, I then created a LineString between A and B and, then, for
 each zipcode in the extraction, I created a polygon out of the zipcode's points and used Shapely's ```object.intersect(obj2)``` method
@@ -12,9 +14,29 @@ polygons onto the map. For the line between A and B, I used Google's polyline to
 accounts for the curvature of the Earth, so the line doesn't always travel through the zipcode areas obtained from their
 intersection with a line that doesn't account for the curvature of the Earth.
 
-Side Note: I apologize for the lack of aesthetics or possibly some rushed and not well-thought out code you may find in the repo. I was quite busy
+Where Further Improvements Can Be Made
+-------
+1. Improve Algorithm - Currently, we are creating polygons for every zipcode. However, if we can "sort" the zip codes and consider only a subset of all the zipcodes by having a heuristic that determines if the zipcode is likely in the line's path, we can reduce the amount of time creating polygons and determining intersections.
+2. Implement a RESTful API like protocol for ```get-intersections```.
+3. Implement Part C, which is basically using Google Directions and plotting that
+4. Improve the aesthetics, such as creatively displaying the zipcodes, instead of using commas and spaces
+5. Much more
+
+Side Note
+---------
+I apologize for the lack of aesthetics or possibly some rushed and not well-thought out code you may find in the repo. I was quite busy
 over the past couple of days and was only able to spend about a half a day on this.
 
-Technologies used: Google Maps API, Shapely, Python Shapefile Library, Django, Bootstrap, Font Awesome
+Technologies used
+-----
+Google Maps API, Shapely, Python Shapefile Library, Django, Bootstrap, Font Awesome
 
-Heroku had an issue with the geos_c library, you can check it out here: http://homejoy.herokuapp.com
+Heroku had an issue with the geos_c library. Otherwise, you would have been able to have a live demo straight from a URL. You can check out that issue here: http://homejoy.herokuapp.com
+
+Images
+-----
+![](https://github.com/briansudo/homejoy/blob/master/ex1.png)
+580 California St San Francisco CA 94104 to 3333 Coyote Hill Rd, Palo Alto, CA 94304
+
+![](https://github.com/briansudo/homejoy/blob/master/ex2.png)
+580 California St San Francisco CA 94104 to new york
