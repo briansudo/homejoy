@@ -10,7 +10,11 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os import environ
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
 
 
 # Quick-start development settings - unsuitable for production
@@ -106,7 +110,4 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-from os import environ
 
-GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
-GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
