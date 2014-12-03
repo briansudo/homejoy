@@ -20,7 +20,8 @@ Where Further Improvements Can Be Made
 2. Implement a RESTful API like protocol for ```get-intersections```.
 3. Implement Part C, which is basically using Google Directions and plotting that
 4. Improve the aesthetics, such as creatively displaying the zipcodes, instead of using commas and spaces
-5. Much more
+5. Improve code quality
+6. etc.
 
 Side Note
 ---------
