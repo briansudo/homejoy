@@ -7,5 +7,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'main.views.index', name='index'),
-    url(r'^get-intersections/', 'main.views.get_polygons', name='get-polygons'),
+    url(r'^get-intersections/(?P<start>.+)/(?P<end>.+)/$', 'main.views.get_polygons', name='get-polygons'),
 )

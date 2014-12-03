@@ -8,6 +8,7 @@
 
 	<link href="{% static "main/css/bootstrap.min.css" %}" rel="stylesheet" >
 	<link href="{% static "main/css/main.css" %}" rel="stylesheet" >
+	<link href="{% static "main/css/font-awesome.min.css" %}" rel="stylesheet" >
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -26,21 +27,25 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 	<div class="container col-md-4">
-		<form role="form">
+		<form id="ab-form" role="form">
 			{% csrf_token %}
 			<div class="input-group">
 			  <span class="input-group-addon">A</span>
-			  <input type="text" class="form-control" value="580 California St San Francisco CA 94104">
+			  <input id="ab-form-a" name="a" type="text" class="form-control" value="580 California St San Francisco CA 94104">
 			</div>
 			<div class="input-group">
 			  <span class="input-group-addon">B</span>
-			  <input type="text" class="form-control" value="3333 Coyote Hill Rd, Palo Alto, CA 94304">
+			  <input id="ab-form-b" name="b" type="text" class="form-control" value="3333 Coyote Hill Rd, Palo Alto, CA 94304">
 			</div>
 			<div class="text-center">
 				<button type="submit" class="btn btn-default">Submit</button>
 			</div>
 		</form>
-
+		<div id="results" class="text-center">
+			<div id="zipcodes">
+			</div>
+			<i id="spinner" class="fa fa-spinner fa-spin fa-3x" style="display:none;"></i>
+		</div>
 	</div>
 	<div id="map-canvas" class="col-md-8">
 	</div>

@@ -8,7 +8,7 @@ def get_shapes(file_name="main/shape_files/cb_2013_us_zcta510_500k"):
 def create_shortest_line(start, end):
     return LineString([start, end])
 
-def get_intersecting_shapes(start=(-122.4042,37.7929), end=(-122.147963,37.402453)):
+def get_intersecting_shapes(start, end):
 
     intersections = {}
 
