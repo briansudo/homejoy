@@ -9,12 +9,9 @@ def create_shortest_line(start, end):
     return LineString([start, end])
 
 def get_intersecting_shapes(start, end):
-
     intersections = {}
-
     shapeRecs = get_shapes()
     shortest_line = create_shortest_line(start, end)
-
     for shapeRec in shapeRecs:
         zip_code = shapeRec.record[0]
         points = shapeRec.shape.points
